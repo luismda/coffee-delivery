@@ -24,7 +24,10 @@ export function Card({ id, name, price, amount }: CoffeeInfoInCart) {
 
   return (
     <CardContainer>
-      <CoffeeImage src={`/src/assets/coffees/${id}.png`} alt="Xícara de café" />
+      <CoffeeImage
+        src={`/coffee-delivery/src/assets/coffees/${id}.png`}
+        alt="Xícara de café"
+      />
 
       <CardContent>
         <CardInfo>

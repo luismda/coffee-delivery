@@ -28,7 +28,10 @@ export function Card({ id, name, description, price, tags }: Coffee) {
 
   return (
     <CardContainer>
-      <Image src={`/src/assets/coffees/${id}.png`} alt="Xícara de café" />
+      <Image
+        src={`/coffee-delivery/src/assets/coffees/${id}.png`}
+        alt="Xícara de café"
+      />
 
       <Tags>
         {tags.map((tag) => {

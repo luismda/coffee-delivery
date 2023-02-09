@@ -444,7 +444,7 @@ Error generating stack: `+o.message+`
       box-shadow: 0 0 0 2px ${e=>e.theme.purple};
     }
   }
-`;function Uk({id:e,name:t,description:n,price:r,tags:i}){const{addOrRemoveCoffeeInCart:o,coffeeListInCart:l}=Ar(),s=r.toLocaleString("pt-br",{minimumFractionDigits:2}),u=l.find(d=>d.id===e),c=(u==null?void 0:u.amount)??0;return b(Mk,{children:[L(Ik,{src:`/src/assets/coffees/${e}.png`,alt:"Xícara de café"}),L(Wk,{children:i.map(d=>L("strong",{children:d},d))}),L(Fk,{children:t}),L(zk,{children:n}),b(Dk,{children:[b(bk,{children:["R$ ",L("strong",{children:s})]}),b(Vk,{children:[L(E1,{defaultValue:c,onChangeCounter:d=>o({coffeeId:e,amount:d})}),L(Jl,{to:"/checkout","aria-label":"Ver meu carrinho",children:L(sd,{size:22,weight:"fill"})})]})]})]})}const Zk=H.section`
+`;function Uk({id:e,name:t,description:n,price:r,tags:i}){const{addOrRemoveCoffeeInCart:o,coffeeListInCart:l}=Ar(),s=r.toLocaleString("pt-br",{minimumFractionDigits:2}),u=l.find(d=>d.id===e),c=(u==null?void 0:u.amount)??0;return b(Mk,{children:[L(Ik,{src:`/coffee-delivery/src/assets/coffees/${e}.png`,alt:"Xícara de café"}),L(Wk,{children:i.map(d=>L("strong",{children:d},d))}),L(Fk,{children:t}),L(zk,{children:n}),b(Dk,{children:[b(bk,{children:["R$ ",L("strong",{children:s})]}),b(Vk,{children:[L(E1,{defaultValue:c,onChangeCounter:d=>o({coffeeId:e,amount:d})}),L(Jl,{to:"/checkout","aria-label":"Ver meu carrinho",children:L(sd,{size:22,weight:"fill"})})]})]})]})}const Zk=H.section`
   padding: 2rem 10rem;
 
   h2 {
@@ -543,7 +543,7 @@ Error generating stack: `+o.message+`
   &:focus {
     box-shadow: 0 0 0 2px ${e=>e.theme.purple};
   }
-`;function mx({id:e,name:t,price:n,amount:r}){const{addOrRemoveCoffeeInCart:i,completelyRemoveACoffeeFromTheCart:o}=Ar(),l=n.toLocaleString("pt-br",{style:"currency",currency:"BRL"});return b(ux,{children:[L(cx,{src:`/src/assets/coffees/${e}.png`,alt:"Xícara de café"}),b(dx,{children:[b(fx,{children:[L("span",{children:t}),L("strong",{children:l})]}),b(px,{children:[L(E1,{defaultValue:r,minValue:1,onChangeCounter:s=>i({coffeeId:e,amount:s})}),b(hx,{type:"button",onClick:()=>o(e),children:[L(sk,{size:16}),"Remover"]})]})]})]})}const yx=H.div`
+`;function mx({id:e,name:t,price:n,amount:r}){const{addOrRemoveCoffeeInCart:i,completelyRemoveACoffeeFromTheCart:o}=Ar(),l=n.toLocaleString("pt-br",{style:"currency",currency:"BRL"});return b(ux,{children:[L(cx,{src:`/coffee-delivery/src/assets/coffees/${e}.png`,alt:"Xícara de café"}),b(dx,{children:[b(fx,{children:[L("span",{children:t}),L("strong",{children:l})]}),b(px,{children:[L(E1,{defaultValue:r,minValue:1,onChangeCounter:s=>i({coffeeId:e,amount:s})}),b(hx,{type:"button",onClick:()=>o(e),children:[L(sk,{size:16}),"Remover"]})]})]})]})}const yx=H.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -15,18 +15,21 @@ export function Home() {
         <h2>Nossos cafés</h2>
 
         <CoffeeList>
-          {coffeeList.map(({ id, name, description, price, tags }) => {
-            return (
-              <Card
-                key={id}
-                id={id}
-                name={name}
-                description={description}
-                price={price}
-                tags={tags}
-              />
-            )
-          })}
+          {coffeeList.map(
+            ({ id, name, description, price, tags, imagePath }) => {
+              return (
+                <Card
+                  key={id}
+                  id={id}
+                  name={name}
+                  description={description}
+                  price={price}
+                  tags={tags}
+                  imagePath={imagePath}
+                />
+              )
+            },
+          )}
         </CoffeeList>
       </CoffeeListContainer>
     </div>

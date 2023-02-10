@@ -18,6 +18,24 @@ export function AddressFields() {
     clearErrors,
   } = useFormContext<ConfirmOrderFormData>()
 
+  function handleAddMaskInZipCode(event: ChangeEvent<HTMLInputElement>) {
+    const currentValue = event.target.value
+
+    event.target.value = currentValue
+      .replace(/[^\d]/g, '')
+      .replace(/^(\d{5})-?(\d{3})/, '$1-$2')
+      .slice(0, 9)
+  }
+
+  function handleAddMaskInStateNameAbbreviation(
+    event: ChangeEvent<HTMLInputElement>,
+  ) {
+    event.target.value = event.target.value
+      .replace(/\d/g, '')
+      .toUpperCase()
+      .slice(0, 2)
+  }
+
   return (
     <AddressFieldsContainer>
       <Input
@@ -31,14 +49,7 @@ export function AddressFields() {
           errors.address?.zipCode ? clearErrors('address.zipCode') : undefined
         }
         {...register('address.zipCode', {
-          onChange: (event: ChangeEvent<HTMLInputElement>) => {
-            const currentValue = event.target.value
-
-            event.target.value = currentValue
-              .replace(/[^\d]/g, '')
-              .replace(/^(\d{5})-?(\d{3})/, '$1-$2')
-              .slice(0, 9)
-          },
+          onChange: handleAddMaskInZipCode,
         })}
       />
 
@@ -118,12 +129,7 @@ export function AddressFields() {
               : undefined
           }
           {...register('address.stateNameAbbreviation', {
-            onChange: (event: ChangeEvent<HTMLInputElement>) => {
-              event.target.value = event.target.value
-                .replace(/\d/g, '')
-                .toUpperCase()
-                .slice(0, 2)
-            },
+            onChange: handleAddMaskInStateNameAbbreviation,
           })}
         />
       </GroupInputs>

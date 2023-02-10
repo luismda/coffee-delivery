@@ -59,14 +59,9 @@ const confirmOrderFormValidationSchema = z.object({
       )
       .transform((str) => str.toUpperCase()),
   }),
-  methodPayment: z
-    .string({
-      invalid_type_error: 'Informe a forma de pagamento',
-    })
-    .regex(
-      /(^credit_card$)|(^debit_card$)|(^money$)/g,
-      'Informe a forma de pagamento',
-    ),
+  methodPayment: z.enum(['credit_card', 'debit_card', 'money'] as const, {
+    invalid_type_error: 'Informe a forma de pagamento',
+  }),
 })
 
 export type ConfirmOrderFormData = z.infer<
@@ -159,17 +154,20 @@ export function Checkout() {
           <CoffeeContainer>
             {coffeeListInCart.length > 0 ? (
               <Box roundedType="opposite">
-                {coffeeListInCart.map(({ id, name, price, amount }) => {
-                  return (
-                    <Card
-                      key={id}
-                      id={id}
-                      name={name}
-                      price={price}
-                      amount={amount}
-                    />
-                  )
-                })}
+                {coffeeListInCart.map(
+                  ({ id, name, price, amount, imagePath }) => {
+                    return (
+                      <Card
+                        key={id}
+                        id={id}
+                        name={name}
+                        price={price}
+                        amount={amount}
+                        imagePath={imagePath}
+                      />
+                    )
+                  },
+                )}
 
                 <SummaryPrices />
 

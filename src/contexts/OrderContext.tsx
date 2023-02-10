@@ -22,6 +22,7 @@ export interface Coffee {
   description: string
   price: number
   tags: string[]
+  imagePath: string
 }
 
 export interface CoffeeInfoInCart {
@@ -29,6 +30,7 @@ export interface CoffeeInfoInCart {
   name: string
   price: number
   amount: number
+  imagePath: string
 }
 
 export interface ConfirmOrderData {
@@ -47,7 +49,7 @@ interface OrderContextData {
   sumOfAllValuesInTheCartWithDelivery: number
   addOrRemoveCoffeeInCart: (coffeeInCart: CoffeInCart) => void
   completelyRemoveACoffeeFromTheCart: (coffeeId: string) => void
-  confirmOrder: (data: any) => void
+  confirmOrder: (data: ConfirmOrderData) => void
 }
 
 export const OrderContext = createContext({} as OrderContextData)
@@ -106,7 +108,8 @@ export function OrderContextProvider({ children }: OrderContextProviderProps) {
       name: coffee.name,
       price: coffee.price,
       amount,
-    }
+      imagePath: coffee.imagePath,
+    } as CoffeeInfoInCart
   })
 
   const sumOfAllValuesInTheCart = coffeeListInCart.reduce(

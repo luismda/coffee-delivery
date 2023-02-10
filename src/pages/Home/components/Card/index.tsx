@@ -16,7 +16,14 @@ import {
   Name,
 } from './style'
 
-export function Card({ id, name, description, price, tags }: Coffee) {
+export function Card({
+  id,
+  name,
+  description,
+  price,
+  tags,
+  imagePath,
+}: Coffee) {
   const { addOrRemoveCoffeeInCart, coffeeListInCart } = useOrder()
 
   const priceFormated = price.toLocaleString('pt-br', {
@@ -28,10 +35,7 @@ export function Card({ id, name, description, price, tags }: Coffee) {
 
   return (
     <CardContainer>
-      <Image
-        src={`/coffee-delivery/src/assets/coffees/${id}.png`}
-        alt="Xícara de café"
-      />
+      <Image src={imagePath} alt="Xícara de café" />
 
       <Tags>
         {tags.map((tag) => {

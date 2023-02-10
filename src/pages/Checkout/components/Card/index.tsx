@@ -13,7 +13,7 @@ import {
   RemoveButton,
 } from './style'
 
-export function Card({ id, name, price, amount }: CoffeeInfoInCart) {
+export function Card({ id, name, price, amount, imagePath }: CoffeeInfoInCart) {
   const { addOrRemoveCoffeeInCart, completelyRemoveACoffeeFromTheCart } =
     useOrder()
 
@@ -24,10 +24,7 @@ export function Card({ id, name, price, amount }: CoffeeInfoInCart) {
 
   return (
     <CardContainer>
-      <CoffeeImage
-        src={`/coffee-delivery/src/assets/coffees/${id}.png`}
-        alt="Xícara de café"
-      />
+      <CoffeeImage src={imagePath} alt="Xícara de café" />
 
       <CardContent>
         <CardInfo>

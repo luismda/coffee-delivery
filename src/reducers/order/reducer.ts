@@ -11,7 +11,7 @@ export interface Address {
   zipCode: string
   street: string
   number: string
-  complement?: string
+  complement?: string | null
   district: string
   city: string
   stateNameAbbreviation: string

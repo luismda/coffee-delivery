@@ -2,23 +2,23 @@
 
 <img src="coffee.gif" width="250" />
 
-Esse projeto é um desafio realizado na trilha de ReactJS do Ignite, um programa de especialização da [Rocketseat](https://github.com/rocketseat-education). O objeto foi desenvolver uma aplicação para um delivery de cafés fictício, colocando em prática diversos conceitos e ferramentas do ReactJS, tais como useReducer, useEffect, imutabilidade, formulários controlled e uncontrolled, estados, Context API, LocalStorage, componentização, roteamento, e muito mais.
+This project is a chalange developed in React.js trail of Ignite, a specialization program of [**Rocketseat**](https://github.com/rocketseat-education). The objective was to develop a fictitious application for the delivery of coffees, putting into practice various concepts and tools of React.js as `useReducer`, `useEffect`, immutability, controlled and uncontrolled form, states, Context API, LocalStorage, componentization, routing and a let more.
 
-Ao longo do desenvolvimento desse projeto pude evoluir e aprender novas coisas, principalmente relacionadas ao TypeScript. Além disso, pude praticar o uso do hook useReducer, que facilitou o reaproveitamento de funções, e também me desafiei a implementar validações no formulário com React Hook Form e Zod, totalmente integrados ao TypeScript. Ainda, é válido destacar o uso do Styled Components que tornou o processo de estilização mais simples e prático.
+During the development this project I could evolve and learn new things, mostly related to TypeScript. Also, I could pratice the use of `useReducer` hook, which facilitated the reuse of functions, and too I challenged myself to implement form validations with React Hook Form and Zod, fully integrated into the TypeScript. Also, the use of Styled Components made the styling process simpler and easier.
 
 #### 📌 Links
 - 🎨 [Figma](https://www.figma.com/file/SDz4UyezNl7lkFu5blK3m3/Coffee-Delivery-(Copy)?node-id=0%3A1)
-- 👀 [Visualize o projeto](https://luismda.github.io/coffee-delivery/)
+- 👀 [Test the application](https://luismda.github.io/coffee-delivery/)
 
-#### ☕ Funcionalidades
-- Listar os cafés disponíveis
-- Adicionar uma quantidade específica de itens no carrinho
-- Aumentar ou diminuir a quantidade de itens no carrinho
-- Preencher no formulário o endereço de entrega e forma de pagamento
-- Exibir o total de itens no carrinho no Header
-- Exibir o valor total da compra no carrinho
+#### ☕ Functionalities
+- List available coffes
+- Add a specific quantity of itens in cart
+- Increase or decrease the quantity of itens in cart
+- Fill in form the address delivery and payment method
+- Show total of itens in cart of Header
+- Calculate the total value of purchase in cart
 
-#### 🛠 Tecnologias utilizadas
+#### 🛠 Tools
 - TypeScript
 - ReactJS
 - Styled Components

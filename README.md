@@ -2,7 +2,7 @@
 
 <img src="coffee.gif" width="250" />
 
-This project is a chalange developed in React.js trail of Ignite, a specialization program of [**Rocketseat**](https://github.com/rocketseat-education). The objective was to develop a fictitious application for the delivery of coffees, putting into practice various concepts and tools of React.js as `useReducer`, `useEffect`, immutability, controlled and uncontrolled form, states, Context API, LocalStorage, componentization, routing and a let more.
+This project is a challenge developed in React.js trail of Ignite, a specialization program of [**Rocketseat**](https://github.com/rocketseat-education). The objective was to develop a fictitious application for the delivery of coffees, putting into practice various concepts and tools of React.js as `useReducer`, `useEffect`, immutability, controlled and uncontrolled form, states, Context API, LocalStorage, componentization, routing and a let more.
 
 During the development this project I could evolve and learn new things, mostly related to TypeScript. Also, I could pratice the use of `useReducer` hook, which facilitated the reuse of functions, and too I challenged myself to implement form validations with React Hook Form and Zod, fully integrated into the TypeScript. Also, the use of Styled Components made the styling process simpler and easier.
 
